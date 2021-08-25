@@ -1,32 +1,28 @@
+// import Footer from "./Footer";
+import Shop from "./Shop";
+import "../styles/Layout.css";
 
-import { useState, useEffect } from 'react'
-import Banner from './Banner'
-import logo from '../assets/logo.png'
-import Cart from './Cart'
-import Footer from './Footer'
-import ShoppingList from './ShoppingList'
-import '../styles/Layout.css'
+import Navbar from "../NavBar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import Home from "./Home";
 
 function App() {
-	const savedCart = localStorage.getItem('cart')
-	const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : [])
-	useEffect(() => {
-		localStorage.setItem('cart', JSON.stringify(cart))
-	}, [cart])
-
-	return (
-		<div>
-			<Banner>
-				<img src={logo} alt='logo-la-maison-jungle' className='lmj-logo' />
-				<h1 className='lmj-title'>La maison jungle</h1>
-			</Banner>
-			<div className='lmj-layout-inner'>
-				<Cart cart={cart} updateCart={updateCart} />
-				<ShoppingList cart={cart} updateCart={updateCart} />
-			</div>
-			<Footer />
-		</div>
-	)
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Shop} />
+          <Route path="/Home" exact component={Home} />
+          <Route path="/sign-in" exact component={SignIn} />
+          <Route path="/sign-up" exact component={SignUp} />
+        </Switch>
+      </Router>
+      {/* <Footer /> */}
+    </>
+  );
 }
 
-export default App
+export default App;
