@@ -22,7 +22,7 @@ padding: 0 1rem;
 height: 100%;
 cursor: pointer;
 &.active {
-	color: #000000;
+	color: white;
 }
 `;
 
@@ -45,7 +45,7 @@ display: flex;
 align-items: center;
 margin-right: -24px;
 /* Second Nav */
-/* margin-right: 24px; */
+/* margin-right: 24px;
 /* Third Nav */
 /* width: 100vw;
 white-space: nowrap; */
@@ -70,7 +70,7 @@ export const NavBtnLink = styled(Link)`
 border-radius: 4px;
 background: #808080;
 padding: 10px 22px;
-color: #000000;
+color: white;
 outline: none;
 border: none;
 cursor: pointer;

@@ -5,6 +5,9 @@ import Cart from "./Cart";
 import ShoppingList from "./ShoppingList";
 
 export default function Shop() {
+
+
+
   const savedCart = localStorage.getItem("cart");
   const [cart, updateCart] = useState(savedCart ? JSON.parse(savedCart) : []);
   useEffect(() => {
