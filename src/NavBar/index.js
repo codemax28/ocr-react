@@ -25,7 +25,7 @@ const Navbar = () => {
           </NavLink>
           <NavLink activeClassName="active" to="/login">Login</NavLink>
             <NavLink activeClassName="active" to="/dashboard">Dashboard </NavLink>
-            <NavLink activeClassName="active" to="/Test">TEST</NavLink>
+            {/* <NavLink activeClassName="active" to="/Test">TEST</NavLink> */}
             <NavLink activeClassName="active" to="/sign-up">Sign Up</NavLink>
 
           {/* Second Nav */}
